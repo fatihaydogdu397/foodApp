@@ -29,7 +29,11 @@ class RecommendedItem extends StatelessWidget {
                       color: Colors.black.withOpacity(0.4)),
                   child: Padding(
                     padding: const EdgeInsets.all(3.0),
-                    child: Icon(Icons.bookmark_border,color: Colors.white,size: 20,),
+                    child: Icon(
+                      Icons.bookmark_border,
+                      color: Colors.white,
+                      size: 20,
+                    ),
                   )),
             ),
           ),
@@ -49,9 +53,7 @@ class RecommendedItem extends StatelessWidget {
                       "Apple Milkshake",
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white
-                      ),
+                          fontWeight: FontWeight.w600, color: Colors.white),
                     ),
                     Container(
                       padding: EdgeInsets.all(5),
@@ -66,7 +68,10 @@ class RecommendedItem extends StatelessWidget {
                                 color: Colors.yellow,
                                 size: 20,
                               ),
-                              Text("4.5",style: TextStyle(color:Colors.white),),
+                              Text(
+                                "4.5",
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ],
                           ),
                           Row(
