@@ -42,26 +42,26 @@ class _NavbarRouteState extends State<NavbarRoute> {
       PersistentBottomNavBarItem(
         icon: Icon(MdiIcons.home),
         title: "Home",
-        activeColor: Colors.white,
-        inactiveColor: Colors.grey[300],
+        activeColor: Colors.green,
+        inactiveColor: Colors.black,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.list),
-        title: ("Food List"),
-        activeColor: Colors.white,
-        inactiveColor: Colors.grey[300],
+        icon: Icon(Icons.add_circle_outline),
+        title: ("Add Recipe"),
+        activeColor: Colors.green,
+        inactiveColor: Colors.black,
       ),
       PersistentBottomNavBarItem(
         icon: Icon(Icons.bookmark_border),
         title: ("Collection"),
-        activeColor: Colors.white,
-        inactiveColor: Colors.grey[300],
+        activeColor: Colors.green,
+        inactiveColor: Colors.black,
       ),
       PersistentBottomNavBarItem(
         icon: Icon(Icons.search),
         title: ("Search"),
-        activeColor: Colors.white,
-        inactiveColor: Colors.grey[300],
+        activeColor: Colors.green,
+        inactiveColor: Colors.black,
       ),
       // PersistentBottomNavBarItem(
       //   icon: Icon(Icons.star_border_outlined),
@@ -116,7 +116,7 @@ class _NavbarRouteState extends State<NavbarRoute> {
         screens: _buildScreens(),
         items: _navBarsItems(),
         confineInSafeArea: true,
-        backgroundColor: Colors.black.withOpacity(0.3),
+        backgroundColor: Colors.white.withOpacity(0.3),
         handleAndroidBackButtonPress: true,
         resizeToAvoidBottomInset: true,
         stateManagement: true,
@@ -173,8 +173,6 @@ class _NavbarRouteState extends State<NavbarRoute> {
           curve: Curves.ease,
           duration: Duration(milliseconds: 250),
         ),
-        
-
         navBarStyle:
             NavBarStyle.style3, // Choose the nav bar style with this property
       ),
