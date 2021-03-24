@@ -35,7 +35,11 @@ class _FoodRecipeState extends State<FoodRecipe> {
         body: PageView(
           controller: _pageController,
           pageSnapping: true,
-          children: [Ingredients(), Directions(), Review()],
+          children: [
+            Ingredients(),
+            Directions(),
+            Review(),
+          ],
         ),
       ),
     );
@@ -60,7 +64,7 @@ class _FoodRecipeState extends State<FoodRecipe> {
       pinned: true,
       centerTitle: false,
       expandedHeight: 450,
-      collapsedHeight: 170,
+      collapsedHeight: 180,
       flexibleSpace: FlexibleSpaceBar(
           centerTitle: true,
           titlePadding: EdgeInsets.all(20),
@@ -105,7 +109,7 @@ class _FoodRecipeState extends State<FoodRecipe> {
                   children: [
                     buildSubCategorySelectableItem(0, 'Ingredients'),
                     // SizedBox(width: 24),
-                    buildSubCategorySelectableItem(1, 'Steps'),
+                    buildSubCategorySelectableItem(1, 'Direction'),
                     // SizedBox(width: 24),
                     buildSubCategorySelectableItem(2, 'Reviews'),
                   ],
@@ -153,5 +157,3 @@ class _FoodRecipeState extends State<FoodRecipe> {
     );
   }
 }
-
-
