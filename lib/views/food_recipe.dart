@@ -6,14 +6,14 @@ import 'package:food_app/views/recipe_page/sub_pages/directions.dart';
 import 'package:food_app/views/recipe_page/sub_pages/ingredients.dart';
 import 'package:food_app/views/recipe_page/sub_pages/review.dart';
 
-class FoodRecipe1 extends StatefulWidget {
-  FoodRecipe1({Key key}) : super(key: key);
+class FoodRecipe extends StatefulWidget {
+  FoodRecipe({Key key}) : super(key: key);
 
   @override
-  _FoodRecipe1State createState() => _FoodRecipe1State();
+  _FoodRecipeState createState() => _FoodRecipeState();
 }
 
-class _FoodRecipe1State extends State<FoodRecipe1> {
+class _FoodRecipeState extends State<FoodRecipe> {
   PageController _pageController;
   var _pageViewListener = ValueNotifier<double>(0.0);
   @override
@@ -154,109 +154,4 @@ class _FoodRecipe1State extends State<FoodRecipe1> {
   }
 }
 
-class FoodRecipe extends StatelessWidget {
-  const FoodRecipe({Key key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      body: DefaultTabController(
-        length: 3,
-        child: NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              SliverAppBar(
-                expandedHeight: 450.0,
-                floating: false,
-                pinned: false,
-                actions: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                          padding: EdgeInsets.all(20),
-                          child: Icon(Icons.bookmark_border,
-                              color: Colors.white, size: 35)),
-                    ],
-                  ),
-                ],
-                backgroundColor: Colors.white,
-                flexibleSpace: FlexibleSpaceBar(
-                    centerTitle: true,
-                    titlePadding: EdgeInsets.all(20),
-                    collapseMode: CollapseMode.none,
-                    //title: AppbarItemDescription(),
-
-                    background: Stack(
-                      children: [
-                        Image(
-                          height: 400,
-                          image: NetworkImage(
-                            "https://www.5boysbaker.com/wp-content/uploads/2015/01/fruit-salad-with-sweetened-condensed-milk.jpg",
-                          ),
-                          fit: BoxFit.fitHeight,
-                        ),
-                        Expanded(
-                            child: Container(
-                                decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Colors.black.withOpacity(0.8),
-                            Colors.black.withOpacity(0),
-                          ],
-                        ))))
-                      ],
-                    )),
-              ),
-              SliverPersistentHeader(
-                delegate: _SliverAppBarDelegate(
-                  TabBar(
-                    labelColor: Colors.lightGreen,
-                    indicatorColor: Colors.lightGreen,
-                    unselectedLabelColor: Colors.grey,
-                    tabs: [
-                      Tab(text: "Ingredients"),
-                      Tab(text: "Direction"),
-                      Tab(text: "Review"),
-                    ],
-                  ),
-                ),
-                pinned: true,
-              ),
-            ];
-          },
-          body: Center(
-            child: Text("Sample text"),
-          ),
-        ),
-      ),
-    ));
-  }
-}
-
-class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
-  _SliverAppBarDelegate(this._tabBar);
-
-  final TabBar _tabBar;
-
-  @override
-  double get minExtent => _tabBar.preferredSize.height;
-  @override
-  double get maxExtent => _tabBar.preferredSize.height;
-
-  @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return new Container(
-      child: _tabBar,
-    );
-  }
-
-  @override
-  bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
-    return false;
-  }
-}

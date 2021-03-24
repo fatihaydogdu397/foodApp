@@ -31,7 +31,7 @@ class _NavbarRouteState extends State<NavbarRoute> {
 
   List<Widget> _buildScreens() {
     return [
-      FoodRecipe1(),
+      FoodRecipe(),
       // Home(),
       FoodList(),
       Collection(),
