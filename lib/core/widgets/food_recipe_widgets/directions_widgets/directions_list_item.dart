@@ -1,32 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-class Directions extends StatelessWidget {
-  const Directions({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: 20, top: 5, right: 20),
-      child: SingleChildScrollView(
-          child: Column(
-        children: [
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-        ],
-      )),
-    );
-  }
-}
-
 class DirectionsListItem extends StatelessWidget {
   const DirectionsListItem({Key key}) : super(key: key);
 
