@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/core/widgets/food_recipe_widgets/directions_widgets/directions_list_item.dart';
 
 class Directions extends StatelessWidget {
   const Directions({Key key}) : super(key: key);
@@ -11,85 +12,21 @@ class Directions extends StatelessWidget {
       child: SingleChildScrollView(
           child: Column(
         children: [
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
-          DirectionsListItem(),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
+          DirectionsListItem(index: 1,directionName: "Wash vegetables",directionDescription: "vegetables should be washed for healthy life and save your life from corona virus thank uuuu",),
         ],
       )),
-    );
-  }
-}
-
-class DirectionsListItem extends StatelessWidget {
-  const DirectionsListItem({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(5),
-      child: Material(
-        elevation: 5,
-        borderRadius: BorderRadius.circular(12),
-        child: Container(
-          width: double.infinity,
-          child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                        padding: EdgeInsets.only(left: 20, top: 12),
-                        child: Text(
-                          "1",
-                          style: TextStyle(
-                              color: Colors.lightGreen,
-                              fontSize: 23,
-                              fontWeight: FontWeight.w900),
-                        ))
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                            padding: EdgeInsets.only(left: 20, top: 12),
-                            child: AutoSizeText("Wash vegetables",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 20))),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Container(
-                            width: MediaQuery.of(context).size.width - 108,
-                            padding:
-                                EdgeInsets.only(left: 20, top: 5, bottom: 20),
-                            child: AutoSizeText(
-                                "a visual exploration asjdha asdlkjajhd asdkjhajshdj asldjkhadhjsa ",
-                                maxLines: 3,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w300,
-                                    fontSize: 12))),
-                      ],
-                    ),
-                  ],
-                ),
-              ]),
-        ),
-      ),
     );
   }
 }

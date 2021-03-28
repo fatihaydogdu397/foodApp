@@ -2,7 +2,16 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class DirectionsListItem extends StatelessWidget {
-  const DirectionsListItem({Key key}) : super(key: key);
+  final int index;
+  final String directionName;
+  final String directionDescription;
+
+  const DirectionsListItem({
+    Key key,
+    this.index,
+    this.directionName,
+    this.directionDescription,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +32,7 @@ class DirectionsListItem extends StatelessWidget {
                     Container(
                         padding: EdgeInsets.only(left: 20, top: 12),
                         child: Text(
-                          "1",
+                          "$index",
                           style: TextStyle(
                               color: Colors.lightGreen,
                               fontSize: 23,
@@ -39,7 +48,7 @@ class DirectionsListItem extends StatelessWidget {
                       children: [
                         Container(
                             padding: EdgeInsets.only(left: 20, top: 12),
-                            child: AutoSizeText("Wash vegetables",
+                            child: AutoSizeText("$directionName",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w800,
                                     fontSize: 20))),
@@ -52,7 +61,7 @@ class DirectionsListItem extends StatelessWidget {
                             padding:
                                 EdgeInsets.only(left: 20, top: 5, bottom: 20),
                             child: AutoSizeText(
-                                "a visual exploration asjdha asdlkjajhd asdkjhajshdj asldjkhadhjsa ",
+                                "$directionDescription",
                                 maxLines: 3,
                                 style: TextStyle(
                                     fontWeight: FontWeight.w300,
