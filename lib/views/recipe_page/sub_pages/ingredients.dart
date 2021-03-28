@@ -12,17 +12,50 @@ class Ingredients extends StatelessWidget {
       child: SingleChildScrollView(
           child: Column(
         children: [
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
-          IngredientsListItem(index: 1,itemName: "watermelon",),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
+          IngredientsListItem(
+            index: 1,
+            itemName: "watermelon",
+          ),
         ],
       )),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/views/collection.dart';
-import 'package:food_app/views/food_recipe.dart';
+import 'package:food_app/views/recipe_page/food_recipe.dart';
 import 'package:food_app/views/home.dart';
 import 'package:food_app/views/list.dart';
 import 'package:food_app/views/search.dart';
@@ -31,8 +31,8 @@ class _NavbarRouteState extends State<NavbarRoute> {
 
   List<Widget> _buildScreens() {
     return [
-      FoodRecipe(),
-      // Home(),
+      // FoodRecipe(),
+      Home(),
       FoodList(),
       Collection(),
       Search(),

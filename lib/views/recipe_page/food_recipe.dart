@@ -38,7 +38,7 @@ class _FoodRecipeState extends State<FoodRecipe> {
           children: [
             Ingredients(),
             Directions(),
-            Review(),
+            // Review(),
           ],
         ),
       ),
