@@ -18,33 +18,6 @@ class Collection extends StatelessWidget {
                 "Collection",
                 style: TextStyle(fontSize: 40, fontWeight: FontWeight.w600),
               ),
-              Container(
-               padding: EdgeInsets.only(top:20, bottom:20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.filter_alt_sharp,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      Icon(
-                        Icons.filter_alt_sharp,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                    ],
-                  ),
-                  Icon(
-                    Icons.filter_alt_sharp,
-                    size: 30,
-                    color: Colors.grey,
-                  ),
-                ],
-              ),
-            ),
               SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -60,34 +33,61 @@ class Collection extends StatelessWidget {
                       CollectionCategoryItem(),
                       CollectionCategoryItem(),
                     ],
-                  )),Expanded(
-              
-              child: Container(
-                 padding: EdgeInsets.only(top:20),
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  // shrinkWrap: true,
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 15,
-                  primary: false,
-                  scrollDirection: Axis.vertical,
+                  )),
+              Container(
+                padding: EdgeInsets.only(top: 20, bottom: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
-                    CollectionListItem(),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.filter_alt_sharp,
+                          size: 30,
+                          color: Colors.grey,
+                        ),
+                        Icon(
+                          Icons.filter_alt_sharp,
+                          size: 30,
+                          color: Colors.grey,
+                        ),
+                      ],
+                    ),
+                    Icon(
+                      Icons.filter_alt_sharp,
+                      size: 30,
+                      color: Colors.grey,
+                    ),
                   ],
                 ),
               ),
-            ),
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.only(top: 20),
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    // shrinkWrap: true,
+                    crossAxisSpacing: 15,
+                    mainAxisSpacing: 15,
+                    primary: false,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                      CollectionListItem(),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -95,5 +95,3 @@ class Collection extends StatelessWidget {
     );
   }
 }
-
-
