@@ -33,11 +33,13 @@ class DirectionsListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       padding: EdgeInsets.all(5),
       child: Material(
         elevation: 5,
         borderRadius: BorderRadius.circular(12),
         child: Container(
+          width: double.infinity,
           child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -45,7 +47,7 @@ class DirectionsListItem extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                        padding: EdgeInsets.all(20),
+                        padding: EdgeInsets.only(left:20,top:12),
                         child: Text(
                           "1",
                           style: TextStyle(
@@ -61,26 +63,23 @@ class DirectionsListItem extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Expanded(
-                          child: Container(
-                              padding: EdgeInsets.only(left: 20, top: 20),
-                              child: AutoSizeText("Wash vegetables",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800, fontSize: 20))),
-                        ),
+                        Container(
+                            padding: EdgeInsets.only(left: 20, top: 12),
+                            child: AutoSizeText("Wash vegetables",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w800, fontSize: 20))),
                       ],
                     ),
                     Row(
                       children: [
-                        Expanded(
-                          child: Container(
-                              padding: EdgeInsets.only(left: 20, top: 7, bottom: 20),
-                              child: AutoSizeText(
-                                  "a visual exploration ",
-                                  maxLines: 3,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.normal, fontSize: 14))),
-                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width-108,
+                            padding: EdgeInsets.only(left: 20, top: 5, bottom: 20),
+                            child: AutoSizeText(
+                                "a visual exploration asjdha asdlkjajhd asdkjhajshdj asldjkhadhjsa ",
+                                maxLines: 3,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w300, fontSize: 12))),
                       ],
                     ),
                   ],
